@@ -1,22 +1,36 @@
-console.log('hello world');
+const myLibrary = [];
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages, status) {
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.read = read;
-  this.bookInfo = function () {
-    return (
-      this.title +
-      ' by ' +
-      this.author +
-      ', ' +
-      this.pages +
-      ' pages, ' +
-      this.read
-    );
-  };
+  this.status = status;
 }
-const book1 = new Book('Ego is the enemy', 'Nurudeen', 100, 'Read');
-console.log(book1.title);
-console.log(book1.bookInfo());
+
+function addBookToLibrary(title, author, pages, status) {
+  const book = new Book(title, author, pages, status);
+  myLibrary.push(book);
+  return book;
+}
+
+function displayBooks() {
+  const bookList = document.getElementById('book-list');
+  bookList.innerHTML = '';
+
+  myLibrary.forEach((book) => {
+    const li = document.createElement('li');
+    li.textContent = `${book.title} by ${book.author}, ${book.pages} pages, ${book.status}`;
+    bookList.appendChild(li);
+  });
+}
+
+document.getElementById('add-book').addEventListener('click', () => {
+  const title = prompt('Enter the book title:');
+  const author = prompt('Enter the author:');
+  const pages = prompt('Number of pages');
+  const status = prompt('Read or Not read?');
+  const newBook = addBookToLibrary(title, author, pages, status);
+  displayBooks();
+});
+
+displayBooks();
