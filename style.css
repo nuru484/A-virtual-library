@@ -1,0 +1,19 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 100vh;
+}
+.form-container {
+  background-color: #e9c1af;
+  height: 100%;
+}
+.book-details-container {
+  background-color: #faf7f5;
+  height: 100%;
+}
