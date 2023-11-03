@@ -23,14 +23,23 @@ function displayBooks() {
     bookList.appendChild(li);
   });
 }
+const newBookForm = document.getElementById('new-book-form');
 
-document.getElementById('add-book').addEventListener('click', () => {
-  const title = prompt('Enter the book title:');
-  const author = prompt('Enter the author:');
-  const pages = prompt('Number of pages');
-  const status = prompt('Read or Not read?');
-  const newBook = addBookToLibrary(title, author, pages, status);
+newBookForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const bookTitle = document.getElementById('title').value;
+  const bookAuthor = document.getElementById('author').value;
+  const bookPages = document.getElementById('pages').value;
+  const bookStatus = document.getElementById('status').value;
+
+  const newBook = addBookToLibrary(
+    bookTitle,
+    bookAuthor,
+    bookPages,
+    bookStatus
+  );
   displayBooks();
-});
 
-displayBooks();
+  newBookForm.reset();
+});

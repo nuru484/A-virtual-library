@@ -10,25 +10,24 @@
   <body>
     <div class="main-container">
       <div class="form-container">
-        <form action="placeholder_for_testing.php" method="post">
+        <form
+          action="placeholder_for_testing.php"
+          method="post"
+          class="new-book-form"
+          id="new-book-form"
+        >
           <label for="title">Book Title</label>
           <input type="text" name="title" id="title" required />
           <label for="author">Book Author</label>
           <input type="text" name="author" id="author" required />
-          <label for="number_of_pages">Number of pages</label>
-          <input
-            type="number"
-            name="number_of_pages"
-            id="number_of_pages"
-            required
-          />
+          <label for="pages">Number of pages</label>
+          <input type="number" name="pages" id="pages" required />
           <select name="status" id="status">
             <option value="read">Read</option>
-            <option value="not_read">Not Read</option>
+            <option value="not-read">Not Read</option>
           </select>
-          <button type="submit">Add Book</button>
+          <button type="submit" id="add-book">Add Book</button>
         </form>
-        <button id="add-book">New Book</button>
       </div>
       <div class="book-details-container">
         <div class="detail-one">
