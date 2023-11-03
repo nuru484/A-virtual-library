@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 
 function Book(title, author, pages, status) {
   this.title = title;
@@ -29,6 +29,10 @@ let booksRead = 0;
 let booksUnread = 0;
 let totalBooks = 0;
 
+const totalBooksElement = document.getElementById('total-books');
+const booksUnreadElement = document.getElementById('books-unread');
+const booksReadElement = document.getElementById('books-read');
+
 newBookForm.addEventListener('submit', function (event) {
   event.preventDefault();
 
@@ -48,14 +52,12 @@ newBookForm.addEventListener('submit', function (event) {
     totalBooks = booksRead + booksUnread;
     const totalBooksElement = document.getElementById('total-books');
     totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
-    const booksReadElement = document.getElementById('books-read');
+
     booksReadElement.textContent = 'BOOKS READ: ' + booksRead;
   } else {
     booksUnread++;
     totalBooks = booksRead + booksUnread;
-    const totalBooksElement = document.getElementById('total-books');
     totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
-    const booksUnreadElement = document.getElementById('books-unread');
     booksUnreadElement.textContent = 'BOOKS UNREAD: ' + booksUnread;
   }
 
@@ -65,5 +67,11 @@ newBookForm.addEventListener('submit', function (event) {
 });
 const deleteAllElement = document.getElementById('delete-all');
 deleteAllElement.addEventListener('click', () => {
-  console.log('hello world');
+  myLibrary = [];
+  booksRead = 0;
+  booksUnread = 0;
+  totalBooks = 0;
+  booksReadElement.textContent = 'BOOKS READ: ' + booksRead;
+  booksUnreadElement.textContent = 'BOOKS UNREAD: ' + booksUnread;
+  totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
 });
