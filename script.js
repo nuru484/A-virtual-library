@@ -23,7 +23,11 @@ function displayBooks() {
     bookList.appendChild(li);
   });
 }
+
 const newBookForm = document.getElementById('new-book-form');
+let booksRead = 0;
+let booksUnread = 0;
+let totalBooks = 0;
 
 newBookForm.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -39,7 +43,27 @@ newBookForm.addEventListener('submit', function (event) {
     bookPages,
     bookStatus
   );
+  if (bookStatus === 'read') {
+    booksRead++;
+    totalBooks = booksRead + booksUnread;
+    const totalBooksElement = document.getElementById('total-books');
+    totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
+    const booksReadElement = document.getElementById('books-read');
+    booksReadElement.textContent = 'BOOKS READ: ' + booksRead;
+  } else {
+    booksUnread++;
+    totalBooks = booksRead + booksUnread;
+    const totalBooksElement = document.getElementById('total-books');
+    totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
+    const booksUnreadElement = document.getElementById('books-unread');
+    booksUnreadElement.textContent = 'BOOKS UNREAD: ' + booksUnread;
+  }
+
   displayBooks();
 
   newBookForm.reset();
+});
+const deleteAllElement = document.getElementById('delete-all');
+deleteAllElement.addEventListener('click', () => {
+  console.log('hello world');
 });
