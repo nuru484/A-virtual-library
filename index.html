@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="book.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Library</title>
@@ -17,7 +18,13 @@
           id="new-book-form"
         >
           <label for="title">Book Title</label>
-          <input type="text" name="title" id="title" required />
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Book Title"
+            required
+          />
           <label for="author">Book Author</label>
           <input type="text" name="author" id="author" required />
           <label for="pages">Number of pages</label>
@@ -41,9 +48,9 @@
           <p id="book-author">AUTHOR</p>
           <p id="book-pages">PAGES</p>
           <p id="book-status">STATUS</p>
-          <!-- <button id="removal">REMOVAL</button> -->
+          <button id="removal">REMOVAL</button>
+          <h1 id="book-list"></h1>
         </div>
-        <h1 id="book-list"></h1>
       </div>
     </div>
   </body>

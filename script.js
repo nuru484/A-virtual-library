@@ -34,6 +34,17 @@ function displayBooks() {
     deleteButtonElement.addEventListener('click', () => {
       book.remove();
       deleteButtonElement.textContent = '';
+      if (book.status === 'read') {
+        booksRead--;
+        totalBooks = booksRead + booksUnread;
+        totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
+        booksReadElement.textContent = 'BOOKS READ: ' + booksRead;
+      } else {
+        booksUnread--;
+        totalBooks = booksRead + booksUnread;
+        totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
+        booksUnreadElement.textContent = 'BOOKS UNREAD: ' + booksUnread;
+      }
     });
     const li = document.createElement('li');
     li.textContent = `${book.title} by ${book.author}, ${book.pages} pages, ${book.status}`;
@@ -81,7 +92,7 @@ newBookForm.addEventListener('submit', function (event) {
 
   displayBooks();
 
-  // newBookForm.reset();
+  newBookForm.reset();
 });
 const deleteAllElement = document.getElementById('delete-all');
 deleteAllElement.addEventListener('click', () => {
@@ -92,12 +103,5 @@ deleteAllElement.addEventListener('click', () => {
   booksReadElement.textContent = 'BOOKS READ: ' + booksRead;
   booksUnreadElement.textContent = 'BOOKS UNREAD: ' + booksUnread;
   totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
+  bookList.textContent = '';
 });
-
-const deleteButtonElement = document.createElement('button');
-deleteButtonElement.textContent = 'Remove';
-this.removal = function (n) {
-  deleteButtonElement.addEventListener('click', () => {
-    myLibrary.splice(n, 1);
-  });
-};
