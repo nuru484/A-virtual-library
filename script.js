@@ -5,21 +5,39 @@ function Book(title, author, pages, status) {
   this.author = author;
   this.pages = pages;
   this.status = status;
+
+  this.remove = function () {
+    const index = myLibrary.indexOf(this);
+
+    if (index !== -1) {
+      myLibrary.splice(index, 1);
+      displayBooks();
+    }
+  };
 }
+const removalElement = document.getElementById('removal');
 
 function addBookToLibrary(title, author, pages, status) {
   const book = new Book(title, author, pages, status);
   myLibrary.push(book);
+
   return book;
 }
 
-function displayBooks() {
-  const bookList = document.getElementById('book-list');
-  bookList.innerHTML = '';
+const bookList = document.getElementById('book-list');
 
+function displayBooks() {
+  bookList.innerHTML = '';
   myLibrary.forEach((book) => {
+    const deleteButtonElement = document.createElement('button');
+    deleteButtonElement.textContent = 'Remove';
+    deleteButtonElement.addEventListener('click', () => {
+      book.remove();
+      deleteButtonElement.textContent = '';
+    });
     const li = document.createElement('li');
     li.textContent = `${book.title} by ${book.author}, ${book.pages} pages, ${book.status}`;
+    bookList.appendChild(deleteButtonElement);
     bookList.appendChild(li);
   });
 }
@@ -63,7 +81,7 @@ newBookForm.addEventListener('submit', function (event) {
 
   displayBooks();
 
-  newBookForm.reset();
+  // newBookForm.reset();
 });
 const deleteAllElement = document.getElementById('delete-all');
 deleteAllElement.addEventListener('click', () => {
@@ -75,3 +93,11 @@ deleteAllElement.addEventListener('click', () => {
   booksUnreadElement.textContent = 'BOOKS UNREAD: ' + booksUnread;
   totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
 });
+
+const deleteButtonElement = document.createElement('button');
+deleteButtonElement.textContent = 'Remove';
+this.removal = function (n) {
+  deleteButtonElement.addEventListener('click', () => {
+    myLibrary.splice(n, 1);
+  });
+};
