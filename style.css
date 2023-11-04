@@ -78,13 +78,13 @@ form button {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  gap: 20px;
+  text-align: left;
   width: 75%;
   height: 75px;
-  margin: 0 auto; /* Center horizontally on the page */
+  margin: 0 auto 20px auto; /* Center horizontally on the page */
   background-color: #1f3e59;
   color: #f7f1f0;
+  padding: 0px 10px 0 10px;
 }
 #book-title,
 #book-author,
@@ -95,14 +95,12 @@ form button {
 }
 
 .detail-three-elements {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 75%;
+  text-align: left;
   height: 75px;
   margin: 0 auto; /* Center horizontally on the page */
-  gap: 20px;
 }
 
 #book-title-data,
@@ -111,4 +109,7 @@ form button {
 #book-status-data,
 #removal-data {
   width: 150px;
+}
+.book-title-data-script {
+  margin: 20px 20px 20px 0px;
 }

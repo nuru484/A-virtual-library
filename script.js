@@ -38,6 +38,8 @@ function displayBooks() {
   bookRemovalDataElement.innerHTML = '';
   myLibrary.forEach((book) => {
     const deleteButtonElement = document.createElement('p');
+    deleteButtonElement.classList.add('book-title-data-script');
+    deleteButtonElement.id = 'delete-button-id';
     deleteButtonElement.textContent = 'Remove';
     deleteButtonElement.addEventListener('click', () => {
       book.remove();
@@ -55,18 +57,22 @@ function displayBooks() {
       }
     });
     const titleOfBook = document.createElement('p');
+    titleOfBook.classList.add('book-title-data-script');
     titleOfBook.textContent = book.title;
     bookTitleDataElement.appendChild(titleOfBook);
 
     const authorOfBook = document.createElement('p');
+    authorOfBook.classList.add('book-title-data-script');
     authorOfBook.textContent = book.author;
     bookAuthorDataElement.appendChild(authorOfBook);
 
     const pagesOfBook = document.createElement('p');
+    pagesOfBook.classList.add('book-title-data-script');
     pagesOfBook.textContent = book.pages;
     bookPageDataElement.appendChild(pagesOfBook);
 
     const statusOfBook = document.createElement('p');
+    statusOfBook.classList.add('book-title-data-script');
     statusOfBook.textContent = book.status;
     bookStatusDataElement.appendChild(statusOfBook);
 
