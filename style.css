@@ -113,3 +113,27 @@ form button {
 .book-title-data-script {
   margin: 20px 20px 20px 0px;
 }
+
+.book-status-data-script {
+  padding: 5px 10px;
+  background-color: #1f3e59;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 5px;
+}
+
+#delete-button-id {
+  padding: 5px 10px;
+  background-color: #d05050;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 5px;
+}
+
+#delete-button-id:hover {
+  background-color: #cc4949;
+}

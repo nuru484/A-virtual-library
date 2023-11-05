@@ -72,7 +72,7 @@ function displayBooks() {
     bookPageDataElement.appendChild(pagesOfBook);
 
     const statusOfBook = document.createElement('p');
-    statusOfBook.classList.add('book-title-data-script');
+    statusOfBook.classList.add('book-status-data-script');
     statusOfBook.textContent = book.status;
     statusOfBook.addEventListener('click', () => {
       book.status = book.status === 'read' ? 'unread' : 'read';
