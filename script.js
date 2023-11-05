@@ -24,12 +24,20 @@ function addBookToLibrary(title, author, pages, status) {
   return book;
 }
 
-const bookList = document.getElementById('book-list');
+const bookTitleDataElement = document.getElementById('book-title-data');
+const bookAuthorDataElement = document.getElementById('book-author-data');
+const bookPageDataElement = document.getElementById('book-pages-data');
+const bookStatusDataElement = document.getElementById('book-status-data');
+const bookRemovalDataElement = document.getElementById('removal-data');
 
 function displayBooks() {
-  bookList.innerHTML = '';
+  bookTitleDataElement.innerHTML = '';
+  bookAuthorDataElement.innerHTML = '';
+  bookPageDataElement.innerHTML = '';
+  bookStatusDataElement.innerHTML = '';
+  bookRemovalDataElement.innerHTML = '';
   myLibrary.forEach((book) => {
-    const deleteButtonElement = document.createElement('button');
+    const deleteButtonElement = document.createElement('p');
     deleteButtonElement.textContent = 'Remove';
     deleteButtonElement.addEventListener('click', () => {
       book.remove();
@@ -46,10 +54,23 @@ function displayBooks() {
         booksUnreadElement.textContent = 'BOOKS UNREAD: ' + booksUnread;
       }
     });
-    const li = document.createElement('li');
-    li.textContent = `${book.title} by ${book.author}, ${book.pages} pages, ${book.status}`;
-    bookList.appendChild(deleteButtonElement);
-    bookList.appendChild(li);
+    const titleOfBook = document.createElement('p');
+    titleOfBook.textContent = book.title;
+    bookTitleDataElement.appendChild(titleOfBook);
+
+    const authorOfBook = document.createElement('p');
+    authorOfBook.textContent = book.author;
+    bookAuthorDataElement.appendChild(authorOfBook);
+
+    const pagesOfBook = document.createElement('p');
+    pagesOfBook.textContent = book.pages;
+    bookPageDataElement.appendChild(pagesOfBook);
+
+    const statusOfBook = document.createElement('p');
+    statusOfBook.textContent = book.status;
+    bookStatusDataElement.appendChild(statusOfBook);
+
+    bookRemovalDataElement.appendChild(deleteButtonElement);
   });
 }
 
@@ -103,5 +124,9 @@ deleteAllElement.addEventListener('click', () => {
   booksReadElement.textContent = 'BOOKS READ: ' + booksRead;
   booksUnreadElement.textContent = 'BOOKS UNREAD: ' + booksUnread;
   totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
-  bookList.textContent = '';
+  bookTitleDataElement.textContent = '';
+  bookAuthorDataElement.textContent = '';
+  bookPageDataElement.textContent = '';
+  bookStatusDataElement.textContent = '';
+  bookRemovalDataElement.textContent = '';
 });
