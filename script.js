@@ -74,6 +74,10 @@ function displayBooks() {
     const statusOfBook = document.createElement('p');
     statusOfBook.classList.add('book-title-data-script');
     statusOfBook.textContent = book.status;
+    statusOfBook.addEventListener('click', () => {
+      book.status = book.status === 'read' ? 'unread' : 'read';
+      statusOfBook.textContent = book.status;
+    });
     bookStatusDataElement.appendChild(statusOfBook);
 
     bookRemovalDataElement.appendChild(deleteButtonElement);
