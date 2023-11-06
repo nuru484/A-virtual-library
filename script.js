@@ -36,6 +36,7 @@ function displayBooks() {
   bookPageDataElement.innerHTML = '';
   bookStatusDataElement.innerHTML = '';
   bookRemovalDataElement.innerHTML = '';
+
   myLibrary.forEach((book) => {
     const deleteButtonElement = document.createElement('p');
     deleteButtonElement.classList.add('book-title-data-script');
@@ -44,6 +45,7 @@ function displayBooks() {
     deleteButtonElement.addEventListener('click', () => {
       book.remove();
       deleteButtonElement.textContent = '';
+
       if (book.status === 'read') {
         booksRead--;
         totalBooks = booksRead + booksUnread;
@@ -56,6 +58,7 @@ function displayBooks() {
         booksUnreadElement.textContent = 'BOOKS UNREAD: ' + booksUnread;
       }
     });
+
     const titleOfBook = document.createElement('p');
     titleOfBook.classList.add('book-title-data-script');
     titleOfBook.textContent = book.title;
@@ -75,11 +78,29 @@ function displayBooks() {
     statusOfBook.classList.add('book-status-data-script');
     statusOfBook.textContent = book.status;
     statusOfBook.addEventListener('click', () => {
-      book.status = book.status === 'read' ? 'unread' : 'read';
-      statusOfBook.textContent = book.status;
-    });
-    bookStatusDataElement.appendChild(statusOfBook);
+      if (book.status === 'read') {
+        book.status = 'unread';
+        if (booksRead > 0) {
+          booksRead--;
+        }
+        booksUnread++;
+      } else {
+        book.status = 'read';
+        booksRead++;
+        if (booksUnread > 0) {
+          booksUnread--;
+        }
+      }
 
+      statusOfBook.textContent = book.status;
+
+      totalBooks = booksRead + booksUnread;
+      totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
+      booksReadElement.textContent = 'BOOKS READ: ' + booksRead;
+      booksUnreadElement.textContent = 'BOOKS UNREAD: ' + booksUnread;
+    });
+
+    bookStatusDataElement.appendChild(statusOfBook);
     bookRemovalDataElement.appendChild(deleteButtonElement);
   });
 }
@@ -107,12 +128,11 @@ newBookForm.addEventListener('submit', function (event) {
     bookPages,
     bookStatus
   );
+
   if (bookStatus === 'read') {
     booksRead++;
     totalBooks = booksRead + booksUnread;
-    const totalBooksElement = document.getElementById('total-books');
     totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
-
     booksReadElement.textContent = 'BOOKS READ: ' + booksRead;
   } else {
     booksUnread++;
@@ -120,7 +140,6 @@ newBookForm.addEventListener('submit', function (event) {
     totalBooksElement.textContent = 'TOTAL BOOKS: ' + totalBooks;
     booksUnreadElement.textContent = 'BOOKS UNREAD: ' + booksUnread;
   }
-
   displayBooks();
 
   newBookForm.reset();
