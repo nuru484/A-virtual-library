@@ -58,23 +58,33 @@ const booksReadElement = document.getElementById("books-read");
 const library = new Library();
 const newBookForm = document.getElementById("new-book-form");
 
+const checkStatus = () => {
+  const status = document.getElementById("status").value;
+
+  if (status === "") {
+    alert("Please select a valid status");
+    return false;
+  }
+  return true;
+};
+
 newBookForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const bookTitle = document.getElementById("title").value;
-  const bookAuthor = document.getElementById("author").value;
-  const bookPages = document.getElementById("pages").value;
-  const bookStatus = document.getElementById("status").value;
+  if (checkStatus()) {
+    const bookTitle = document.getElementById("title").value;
+    const bookAuthor = document.getElementById("author").value;
+    const bookPages = document.getElementById("pages").value;
+    const bookStatus = document.getElementById("status").value;
 
-  library.addBookToLibrary(bookTitle, bookAuthor, bookPages, bookStatus);
-  library.updateBookCount();
-  displayBooks();
-
-  newBookForm.reset();
+    library.addBookToLibrary(bookTitle, bookAuthor, bookPages, bookStatus);
+    library.updateBookCount();
+    displayBooks();
+    newBookForm.reset();
+  } else return;
 });
 
 const deleteAllElement = document.getElementById("delete-all");
-
 deleteAllElement.addEventListener("click", () => {
   library.deleteAllBooks();
   displayBookCounts();
@@ -93,10 +103,10 @@ function displayBooks() {
     deleteButtonElement.classList.add("book-title-data-script");
     deleteButtonElement.id = "delete-button-id";
     deleteButtonElement.textContent = "Remove";
+
     deleteButtonElement.addEventListener("click", () => {
       book.remove();
       deleteButtonElement.textContent = "";
-
       library.updateBookCount();
     });
 
