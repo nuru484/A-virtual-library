@@ -94,13 +94,13 @@ function displayBooks() {
     bookDetail.classList.add("book-details");
 
     const titleOfBook = document.createElement("p");
-    titleOfBook.textContent = book.title;
+    titleOfBook.textContent = `Title: ${book.title}`;
 
     const authorOfBook = document.createElement("p");
-    authorOfBook.textContent = book.author;
+    authorOfBook.textContent = `Author: ${book.author}`;
 
     const pagesOfBook = document.createElement("p");
-    pagesOfBook.textContent = book.pages;
+    pagesOfBook.textContent = `Pages: ${book.pages}`;
 
     const statusOfBook = document.createElement("img");
     statusOfBook.src = book.status === "Read" ? "checkmark.png" : "close.png";

@@ -19,6 +19,13 @@
   background-color: #f7f1f0;
 }
 
+@media (max-width: 1000px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    height: 100dvh;
+  }
+}
+
 .logo {
   display: flex;
   text-align: center;
@@ -78,53 +85,43 @@ form button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-  color: #1f3e59;
+  gap: 3dvw;
+  margin: 5dvw;
+  padding: clamp(0.8rem, 1.5dvw, 1.5rem);
+  background-color: #1f3e59;
+  border-radius: 5px;
+  color: #f7f1f0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5dvw;
   font-size: clamp(0.6rem, 1.5dvw, 1.5rem);
   white-space: nowrap;
 }
 
 .detail-one #delete-all {
   background-color: #b82c2c;
-  padding: 0.6rem;
-  border-radius: 4px;
+  padding: 0.4rem;
+  border-radius: 2px;
   color: #f7f1f0;
+  font-size: 1.5dvw;
   transition: background-color 0.3s ease-in-out;
 }
 .detail-one #delete-all:hover {
   background-color: #cf3131;
 }
 
-.detail-two-elements {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 5dvw;
-  background-color: #1f3e59;
-  padding: 1rem;
-  margin: 2dvw auto;
-  width: 55dvw;
-  color: #f7f1f0;
-}
-
 .book-details {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: space-around;
-  align-content: center;
-  gap: 5dvw;
-  background-color: #1f3e59;
-  padding: 1rem;
-  margin: 2dvw auto;
-  width: 55dvw;
-  color: #f7f1f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2dvw 5dvw;
+  padding: clamp(0.4rem, 1.2dvw, 1.2rem);
+  color: #1f3e59;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0.6rem, 1.5dvw, 1.5rem);
+  border: 2px solid #1f3e59;
+  gap: 4px;
 }
 
 .book-details > * {
-  width: 6dvw;
+  width: 15dvw;
   word-wrap: break-word;
 }
