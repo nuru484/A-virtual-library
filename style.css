@@ -6,7 +6,7 @@
 }
 .main-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 3fr;
   height: 100vh;
 }
 
@@ -23,30 +23,41 @@
   display: flex;
   text-align: center;
   justify-content: center;
-  margin: 0.8rem 0 2.5rem 0;
 }
 .logo P {
   font-weight: 700;
-  font-size: 46px;
-  margin-left: 10px;
+  font-size: 2.5rem;
   color: #1f3e59;
 }
 
 .new-book-form {
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
 }
 
-input,
-select,
-button {
-  margin: 0.8rem;
-}
-
+form input,
+form select,
 form button {
-  height: 2rem;
+  padding: 0.5rem;
+  margin: 0.8rem;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid #000;
+}
+
+.add-book-button {
+  height: 2.5rem;
   background-color: #1f3e59;
   border-radius: 5px;
+  color: #f7f1f0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.add-book-button:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  background-color: #264b6c;
   color: #f7f1f0;
 }
 
@@ -54,52 +65,30 @@ form button {
   color: #1f3e59;
 }
 
-.detail-one {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin: 60px 20px 20px 20px;
-}
-
-.detail-one button {
-  background-color: #d05050;
-  height: 55px;
-  width: 150px;
-  margin-top: -15px;
-  border-radius: 2px;
-}
-.detail-two-elements {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  width: 75%;
-  height: 75px;
-  margin: 0 auto 20px auto; /* Center horizontally on the page */
-  background-color: #1f3e59;
-  color: #f7f1f0;
-  padding: 0px 10px 0 10px;
-}
-
-.detail-two-elements {
-  display: flex;
-  gap: 0.5rem;
-}
-
+.detail-one,
+.detail-two-elements,
 .detail-three-elements {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.book-title-data-script {
-  margin: 20px 20px 20px 0px;
+.detail-one {
+  margin: 1.5rem;
+  padding: 1rem;
+  color: #1f3e59;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
 }
-.book-status-data-script {
-  width: 80px;
-  background-color: #d05050;
-  color: #fff;
-  cursor: pointer;
+
+.detail-one #delete-all {
+  background-color: #b82c2c;
+  padding: 0.6rem;
   border-radius: 4px;
-  text-align: center;
-  margin: 20px 20px 20px 0px;
+  color: #f7f1f0;
+  transition: background-color 0.3s ease-in-out;
+}
+.detail-one #delete-all:hover {
+  background-color: #cf3131;
 }
