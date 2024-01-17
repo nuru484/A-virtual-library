@@ -101,7 +101,7 @@ form button {
 
 .detail-two-elements {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 5dvw;
   background-color: #1f3e59;
@@ -110,19 +110,32 @@ form button {
   width: 55dvw;
   color: #f7f1f0;
 }
-.detail-three-elements {
+/* .detail-three {
   display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  gap: 2rem;
+  justify-content: space-around;
+  align-content: center;
+  gap: 5dvw;
   background-color: #1f3e59;
   padding: 1rem;
-  margin: 0 auto;
+  margin: 2dvw auto;
+  width: 55dvw;
+  color: #f7f1f0;
+} */
+
+.book-details {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-around;
+  align-content: center;
+  gap: 5dvw;
+  background-color: #1f3e59;
+  padding: 1rem;
+  margin: 2dvw auto;
   width: 55dvw;
   color: #f7f1f0;
 }
 
-.detail-three {
-  width: 200px;
-  border: 2px solid white;
+.book-details > * {
+  width: 100px;
+  word-wrap: break-word;
 }

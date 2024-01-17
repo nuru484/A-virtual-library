@@ -92,65 +92,49 @@ deleteAllElement.addEventListener("click", () => {
 });
 
 function displayBooks() {
-  bookTitleDataElement.innerHTML = "";
-  bookAuthorDataElement.innerHTML = "";
-  bookPageDataElement.innerHTML = "";
-  bookStatusDataElement.innerHTML = "";
-  bookRemovalDataElement.innerHTML = "";
+  const bookDetailElement = document.getElementById("detail-three");
+  bookDetailElement.innerHTML = "";
 
   library.books.forEach((book) => {
-    const deleteButtonElement = document.createElement("p");
-    deleteButtonElement.classList.add("book-title-data-script");
-    deleteButtonElement.id = "delete-button-id";
-    deleteButtonElement.textContent = "Remove";
-
-    deleteButtonElement.addEventListener("click", () => {
-      book.remove();
-      deleteButtonElement.textContent = "";
-      library.updateBookCount();
-    });
+    const bookDetail = document.createElement("div");
+    bookDetail.classList.add("book-details");
 
     const titleOfBook = document.createElement("p");
-    titleOfBook.classList.add("book-title-data-script");
     titleOfBook.textContent = book.title;
-    bookTitleDataElement.appendChild(titleOfBook);
 
     const authorOfBook = document.createElement("p");
-    authorOfBook.classList.add("book-title-data-script");
     authorOfBook.textContent = book.author;
-    bookAuthorDataElement.appendChild(authorOfBook);
 
     const pagesOfBook = document.createElement("p");
-    pagesOfBook.classList.add("book-title-data-script");
     pagesOfBook.textContent = book.pages;
-    bookPageDataElement.appendChild(pagesOfBook);
 
     const statusOfBook = document.createElement("p");
-    statusOfBook.classList.add("book-status-data-script");
     statusOfBook.textContent = book.status;
-
     statusOfBook.addEventListener("click", () => {
-      if (book.status === "read") {
-        book.status = "unread";
-        if (library.booksRead > 0) {
-          library.booksRead--;
-        }
-        library.booksUnread++;
-      } else {
-        book.status = "read";
-        library.booksRead++;
-        if (library.booksUnread > 0) {
-          library.booksUnread--;
-        }
-      }
-
+      book.status = book.status === "Read" ? "Unread" : "Read";
+      library.booksRead += book.status === "Read" ? 1 : -1;
+      library.booksUnread += book.status === "Unread" ? 1 : -1;
       statusOfBook.textContent = book.status;
-
       totalBooks = library.booksRead + library.booksUnread;
       displayBookCounts();
     });
 
-    bookStatusDataElement.appendChild(statusOfBook);
-    bookRemovalDataElement.appendChild(deleteButtonElement);
+    const deleteBook = document.createElement("p");
+    deleteBook.textContent = "Remove";
+    deleteBook.addEventListener("click", () => {
+      book.remove();
+      deleteBook.textContent = "";
+      library.updateBookCount();
+    });
+
+    bookDetail.append(
+      titleOfBook,
+      authorOfBook,
+      pagesOfBook,
+      statusOfBook,
+      deleteBook
+    );
+
+    bookDetailElement.appendChild(bookDetail);
   });
 }
