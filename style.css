@@ -80,29 +80,15 @@ form button {
   color: #f7f1f0;
   padding: 0px 10px 0 10px;
 }
-#book-title,
-#book-author,
-#book-pages,
-#book-status,
-#removal {
-  width: 150px;
+
+.detail-two-elements {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .detail-three-elements {
-  width: 100%;
   display: flex;
   justify-content: center;
-  text-align: left;
-  height: 75px;
-  margin: 0 auto; /* Center horizontally on the page */
-}
-
-#book-title-data,
-#book-author-data,
-#book-pages-data,
-#book-status-data,
-#removal-data {
-  width: 150px;
 }
 
 .book-title-data-script {
@@ -116,18 +102,4 @@ form button {
   border-radius: 4px;
   text-align: center;
   margin: 20px 20px 20px 0px;
-}
-
-#delete-button-id {
-  width: 75px;
-  background-color: #d05050;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 4px;
-  text-align: center;
-  margin: 20px 20px 20px 0px;
-}
-
-#delete-button-id:hover {
-  background-color: #d05050;
 }
