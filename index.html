@@ -27,6 +27,7 @@
             id="title"
             placeholder="Book Title"
             required
+            maxlength="75"
           />
           <input
             type="text"
@@ -34,6 +35,7 @@
             id="author"
             placeholder="Book Author"
             required
+            maxlength="75"
           />
           <input
             type="number"
@@ -41,8 +43,11 @@
             id="pages"
             placeholder="Number of Pages"
             required
+            min="15"
+            max="1500"
           />
           <select name="status" id="status">
+            <option value="" selected disabled>Select Status</option>
             <option value="read">Read</option>
             <option value="unread">Not Read</option>
           </select>
