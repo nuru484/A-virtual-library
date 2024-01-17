@@ -75,11 +75,17 @@ form button {
 }
 
 .detail-one {
-  margin: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
   padding: 1rem;
   color: #1f3e59;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.5dvw;
+  font-size: clamp(0.6rem, 1.5dvw, 1.5rem);
+  white-space: nowrap;
 }
 
 .detail-one #delete-all {
@@ -91,4 +97,32 @@ form button {
 }
 .detail-one #delete-all:hover {
   background-color: #cf3131;
+}
+
+.detail-two-elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5dvw;
+  background-color: #1f3e59;
+  padding: 1rem;
+  margin: 2dvw auto;
+  width: 55dvw;
+  color: #f7f1f0;
+}
+.detail-three-elements {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 2rem;
+  background-color: #1f3e59;
+  padding: 1rem;
+  margin: 0 auto;
+  width: 55dvw;
+  color: #f7f1f0;
+}
+
+.detail-three {
+  width: 200px;
+  border: 2px solid white;
 }
