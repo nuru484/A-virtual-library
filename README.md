@@ -186,4 +186,4 @@ This is the entire process I took in building the app;
 
 - Thanks to [The Odin Project](https://www.theodinproject.com/)
 
-All praised to Allah.
+- All praised to Allah.
