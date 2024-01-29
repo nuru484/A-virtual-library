@@ -49,3 +49,8 @@ Here is the overview of the entire project;
 <div align="center">
   <img src="./src/assets/mobile-view.png" alt="mobile-view-of-app" width="300">
 </div>
+
+### Links
+
+- Source code URL: https://github.com/nuru484/A-virtual-library
+- Live Site URL: https://nuru484.github.io/A-virtual-library/
