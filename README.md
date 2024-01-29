@@ -71,3 +71,19 @@ This is the entire process I took in building the app;
 - ![Shell Script](https://img.shields.io/badge/Terminal-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 - ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 - ![Git](https://img.shields.io/badge/Git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white)
+
+### Features:
+
+- **Add Books**: Users can input book details and add them to the library.
+
+- **Display Books**: Books in the library are displayed on the page, either in a table or as individual cards.
+
+- **New Book Form**: A form allows users to input book details such as author, title, number of pages, and read status.
+
+- **Remove Books**: Users can remove books from the library.
+
+- **Change Read Status**: Users can toggle the read status of a book.
+
+- **User Input Validation**: Input fields are validated to ensure data integrity.
+
+- **Intuitive UI**: The interface is designed to be user-friendly and intuitive for adding, displaying, and interacting with books.
