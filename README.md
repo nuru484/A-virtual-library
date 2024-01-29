@@ -41,3 +41,11 @@ Here is the overview of the entire project;
 - **User Input Validation**: Validating user input to maintain data integrity and prevent errors.
 
 - **UI/UX Design**: Designing an intuitive interface for adding, displaying, and interacting with books.
+
+### Screenshot
+
+![Desktop-view-of-app](./src/assets/desktop-view.png)
+
+<div align="center">
+  <img src="./src/assets/mobile-view.png" alt="mobile-view-of-app" width="300">
+</div>
