@@ -54,3 +54,7 @@ Here is the overview of the entire project;
 
 - Source code URL: https://github.com/nuru484/A-virtual-library
 - Live Site URL: https://nuru484.github.io/A-virtual-library/
+
+## My process
+
+This is the entire process I took in building the app;
