@@ -165,3 +165,14 @@ This is the entire process I took in building the app;
 - **Backup and Sync**: Providing options for users to backup their library data and sync it across multiple devices for seamless access.
 
 - **API Integration**: Integrating with external APIs to enhance functionality, such as retrieving book metadata, accessing book reviews, or connecting with online bookstores.
+
+### Useful Resources:
+
+- [OpenAI](https://chat.openai.com/?model=text-davinci-002-render-sha) - ChatGPT streamlines my workflow by handling repetitive tasks and offering solutions that save time and effort. It effectively minimizes the need for me to perform certain actions repeatedly, thereby optimizing productivity and allowing me to focus on more critical aspects of development.
+- [Flaticon](https://www.flaticon.com/) - "I utilize Flaticon for sourcing icons used in my project.
+
+- **MDN Web Docs**: A comprehensive resource for web development, including guides, tutorials, and reference documentation for HTML, CSS, and JavaScript. [MDN Web Docs](https://developer.mozilla.org/en-US/)
+
+- **GitHub**: A platform for hosting and collaborating on code repositories. Explore open-source projects, contribute to existing ones, or showcase your own work. [GitHub](https://github.com/)
+
+- **CSS-Tricks**: Offers articles, tutorials, and resources on CSS, front-end development, and design techniques. [CSS-Tricks](https://css-tricks.com/)
