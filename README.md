@@ -87,3 +87,23 @@ This is the entire process I took in building the app;
 - **User Input Validation**: Input fields are validated to ensure data integrity.
 
 - **Intuitive UI**: The interface is designed to be user-friendly and intuitive for adding, displaying, and interacting with books.
+
+### Learning Points:
+
+- **Object-Oriented JavaScript**: Practicing object-oriented programming principles by creating book objects and manipulating them.
+
+- **DOM Manipulation**: Learning how to dynamically update the DOM to display and interact with data.
+
+- **Form Handling**: Understanding how to create and handle form submissions in HTML and JavaScript.
+
+- **Event Handling**: Practicing event handling to respond to user interactions such as clicks and submissions.
+
+- **Array Manipulation**: Learning how to add, remove, and modify elements in JavaScript arrays.
+
+- **Input Validation**: Implementing input validation techniques to ensure data integrity and prevent errors.
+
+- **User Interface Design**: Gaining experience in designing user-friendly interfaces for web applications.
+
+- **Problem-Solving**: Developing problem-solving skills by tackling challenges such as data management and user interaction.
+
+- **Version Control**: Practicing version control with Git to track changes and collaborate on the project.
