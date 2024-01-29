@@ -33,7 +33,7 @@ class Library {
   }
   updateBookCount() {
     library.booksRead = library.books.filter(
-      (book) => book.status === "Read"
+      (book) => book.status === 'Read'
     ).length;
     library.booksUnread = library.books.length - library.booksRead;
     displayBookCounts();
@@ -42,34 +42,34 @@ class Library {
 
 const library = new Library();
 
-const totalBooksElement = document.getElementById("total-books");
-const booksUnreadElement = document.getElementById("books-unread");
-const booksReadElement = document.getElementById("books-read");
+const totalBooksElement = document.getElementById('total-books');
+const booksUnreadElement = document.getElementById('books-unread');
+const booksReadElement = document.getElementById('books-read');
 
 const displayBookCounts = () => {
-  totalBooksElement.textContent = "TOTAL BOOKS: " + library.books.length;
-  booksReadElement.textContent = "BOOKS READ: " + library.booksRead;
-  booksUnreadElement.textContent = "BOOKS UNREAD: " + library.booksUnread;
+  totalBooksElement.textContent = 'TOTAL BOOKS: ' + library.books.length;
+  booksReadElement.textContent = 'BOOKS READ: ' + library.booksRead;
+  booksUnreadElement.textContent = 'BOOKS UNREAD: ' + library.booksUnread;
 };
 
 const checkStatus = () => {
-  const status = document.getElementById("status").value;
-  if (status === "") {
-    alert("Please select a valid status");
+  const status = document.getElementById('status').value;
+  if (status === '') {
+    alert('Please select a valid status');
     return false;
   }
   return true;
 };
 
-const newBookForm = document.getElementById("new-book-form");
-newBookForm.addEventListener("submit", function (event) {
+const newBookForm = document.getElementById('new-book-form');
+newBookForm.addEventListener('submit', function (event) {
   event.preventDefault();
 
   if (checkStatus()) {
-    const bookTitle = document.getElementById("title").value;
-    const bookAuthor = document.getElementById("author").value;
-    const bookPages = document.getElementById("pages").value;
-    const bookStatus = document.getElementById("status").value;
+    const bookTitle = document.getElementById('title').value;
+    const bookAuthor = document.getElementById('author').value;
+    const bookPages = document.getElementById('pages').value;
+    const bookStatus = document.getElementById('status').value;
 
     library.addBookToLibrary(bookTitle, bookAuthor, bookPages, bookStatus);
     library.updateBookCount();
@@ -78,52 +78,52 @@ newBookForm.addEventListener("submit", function (event) {
   } else return;
 });
 
-const deleteAllElement = document.getElementById("delete-all");
-deleteAllElement.addEventListener("click", () => {
+const deleteAllElement = document.getElementById('delete-all');
+deleteAllElement.addEventListener('click', () => {
   library.deleteAllBooks();
   displayBookCounts();
   displayBooks();
 });
 
 function displayBooks() {
-  const bookDetailElement = document.getElementById("detail-three");
-  bookDetailElement.innerHTML = "";
+  const bookDetailElement = document.getElementById('detail-three');
+  bookDetailElement.innerHTML = '';
 
   library.books.forEach((book) => {
-    const bookDetail = document.createElement("div");
-    bookDetail.classList.add("book-details");
+    const bookDetail = document.createElement('div');
+    bookDetail.classList.add('book-details');
 
-    const titleOfBook = document.createElement("p");
+    const titleOfBook = document.createElement('p');
     titleOfBook.textContent = `Title: ${book.title}`;
 
-    const authorOfBook = document.createElement("p");
+    const authorOfBook = document.createElement('p');
     authorOfBook.textContent = `Author: ${book.author}`;
 
-    const pagesOfBook = document.createElement("p");
+    const pagesOfBook = document.createElement('p');
     pagesOfBook.textContent = `Pages: ${book.pages}`;
 
-    const statusOfBook = document.createElement("img");
-    statusOfBook.src = book.status === "Read" ? "checkmark.png" : "close.png";
-    statusOfBook.style.width = book.status === "Read" ? "25px" : "25px";
+    const statusOfBook = document.createElement('img');
+    statusOfBook.src = book.status === 'Read' ? 'checkmark.png' : 'close.png';
+    statusOfBook.style.width = book.status === 'Read' ? '25px' : '25px';
 
-    statusOfBook.addEventListener("click", () => {
-      book.status = book.status === "Read" ? "Unread" : "Read";
-      library.booksRead += book.status === "Read" ? 1 : -1;
-      library.booksUnread += book.status === "Unread" ? 1 : -1;
+    statusOfBook.addEventListener('click', () => {
+      book.status = book.status === 'Read' ? 'Unread' : 'Read';
+      library.booksRead += book.status === 'Read' ? 1 : -1;
+      library.booksUnread += book.status === 'Unread' ? 1 : -1;
 
-      statusOfBook.src = book.status === "Read" ? "checkmark.png" : "close.png";
-      statusOfBook.style.width = book.status === "Read" ? "25px" : "25px";
+      statusOfBook.src = book.status === 'Read' ? 'checkmark.png' : 'close.png';
+      statusOfBook.style.width = book.status === 'Read' ? '25px' : '25px';
 
       totalBooks = library.booksRead + library.booksUnread;
       displayBookCounts();
     });
 
-    const deleteBook = document.createElement("img");
-    deleteBook.src = "delete.png";
-    deleteBook.style.width = "20px";
-    deleteBook.addEventListener("click", () => {
+    const deleteBook = document.createElement('img');
+    deleteBook.src = 'delete.png';
+    deleteBook.style.width = '20px';
+    deleteBook.addEventListener('click', () => {
       book.remove();
-      deleteBook.textContent = "";
+      deleteBook.textContent = '';
       library.updateBookCount();
     });
     bookDetail.append(
@@ -137,3 +137,9 @@ function displayBooks() {
     bookDetailElement.appendChild(bookDetail);
   });
 }
+
+const addBook = document.getElementById('add-book');
+addBook.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log('hello');
+});
