@@ -129,3 +129,39 @@ This is the entire process I took in building the app;
 - **Continuous Integration/Continuous Deployment (CI/CD)**: Setting up automated pipelines for building, testing, and deploying the application to streamline the development process.
 
 - **Feedback and Iteration**: Incorporating user feedback and iterating on the application to continuously improve its functionality and user experience.
+
+### Additional Features:
+
+- **Search Functionality**: Implementing a search feature to allow users to search for books by title, author, or other criteria.
+
+- **Sorting and Filtering**: Providing options for users to sort and filter the library by different attributes such as title, author, genre, or read status.
+
+- **Multiple Libraries**: Allowing users to create and manage multiple libraries, each with its own collection of books.
+
+- **Import/Export**: Adding functionality to import books from external sources such as CSV files or online databases, and export library data for backup or sharing purposes.
+
+- **User Authentication**: Implementing user accounts and authentication to personalize the library experience and enable features like saving reading progress or creating custom booklists.
+
+- **Reading Statistics**: Providing users with insights into their reading habits, such as total number of books read, reading time, or favorite genres/authors.
+
+- **Book Recommendations**: Offering personalized book recommendations based on user preferences, reading history, or popular trends.
+
+- **Social Features**: Integrating social features such as sharing book recommendations, following other users, or participating in book discussions or reading challenges.
+
+- **Book Details and Reviews**: Displaying additional information about each book, such as summaries, reviews, ratings, or links to purchase or borrow from external sources.
+
+- **Offline Support**: Allowing users to access their library and read books offline by caching data locally or providing downloadable content.
+
+- **Accessibility Enhancements**: Ensuring the app is accessible to users with disabilities by implementing features like screen reader compatibility, keyboard navigation, and adjustable font sizes.
+
+- **Internationalization (i18n)**: Supporting multiple languages and locales to make the app accessible to users worldwide.
+
+- **Notifications**: Sending notifications to remind users of due dates, recommend new books, or inform them of library updates.
+
+- **Integration with E-Book Platforms**: Integrating with e-book platforms or libraries to allow users to borrow or purchase digital copies of books directly from the app.
+
+- **Customizable Themes and Layouts**: Offering users the ability to customize the app's appearance and layout according to their preferences.
+
+- **Backup and Sync**: Providing options for users to backup their library data and sync it across multiple devices for seamless access.
+
+- **API Integration**: Integrating with external APIs to enhance functionality, such as retrieving book metadata, accessing book reviews, or connecting with online bookstores.
