@@ -107,3 +107,25 @@ This is the entire process I took in building the app;
 - **Problem-Solving**: Developing problem-solving skills by tackling challenges such as data management and user interaction.
 
 - **Version Control**: Practicing version control with Git to track changes and collaborate on the project.
+
+### Continued Development:
+
+- **Refactoring**: Learning how to refactor code to improve readability, performance, and maintainability.
+
+- **Testing**: Exploring testing methodologies such as unit testing and integration testing to ensure the reliability of the application.
+
+- **Error Handling**: Implementing error handling techniques to gracefully handle unexpected situations and provide meaningful feedback to users.
+
+- **Optimization**: Optimizing the application for performance by identifying and addressing bottlenecks in code or resource usage.
+
+- **Accessibility**: Enhancing accessibility features to ensure the application is usable by people with disabilities.
+
+- **Cross-Browser Compatibility**: Testing and ensuring the application works correctly across different web browsers and platforms.
+
+- **Security**: Implementing security measures to protect against common vulnerabilities such as cross-site scripting (XSS) and injection attacks.
+
+- **Documentation**: Improving documentation to make the codebase more understandable for other developers and future maintenance.
+
+- **Continuous Integration/Continuous Deployment (CI/CD)**: Setting up automated pipelines for building, testing, and deploying the application to streamline the development process.
+
+- **Feedback and Iteration**: Incorporating user feedback and iterating on the application to continuously improve its functionality and user experience.
