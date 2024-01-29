@@ -103,7 +103,10 @@ function displayBooks() {
     pagesOfBook.textContent = `Pages: ${book.pages}`;
 
     const statusOfBook = document.createElement('img');
-    statusOfBook.src = book.status === 'Read' ? 'checkmark.png' : 'close.png';
+    statusOfBook.src =
+      book.status === 'Read'
+        ? 'src/assets/checkmark.png'
+        : 'src/assets/close.png';
     statusOfBook.style.width = book.status === 'Read' ? '25px' : '25px';
 
     statusOfBook.addEventListener('click', () => {
@@ -111,7 +114,10 @@ function displayBooks() {
       library.booksRead += book.status === 'Read' ? 1 : -1;
       library.booksUnread += book.status === 'Unread' ? 1 : -1;
 
-      statusOfBook.src = book.status === 'Read' ? 'checkmark.png' : 'close.png';
+      statusOfBook.src =
+        book.status === 'Read'
+          ? 'src/assets/checkmark.png'
+          : 'src/assets/close.png';
       statusOfBook.style.width = book.status === 'Read' ? '25px' : '25px';
 
       totalBooks = library.booksRead + library.booksUnread;
@@ -119,7 +125,7 @@ function displayBooks() {
     });
 
     const deleteBook = document.createElement('img');
-    deleteBook.src = 'delete.png';
+    deleteBook.src = 'src/assets/delete.png';
     deleteBook.style.width = '20px';
     deleteBook.addEventListener('click', () => {
       book.remove();
