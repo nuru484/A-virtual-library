@@ -176,3 +176,14 @@ This is the entire process I took in building the app;
 - **GitHub**: A platform for hosting and collaborating on code repositories. Explore open-source projects, contribute to existing ones, or showcase your own work. [GitHub](https://github.com/)
 
 - **CSS-Tricks**: Offers articles, tutorials, and resources on CSS, front-end development, and design techniques. [CSS-Tricks](https://css-tricks.com/)
+
+## Author
+
+- Twitter - [Nurudeen Abdul-Majeed](https://twitter.com/ABDULMAJEEDNUR3)
+- Linkedin - [Nurudeen Abdul-Majeed](https://www.linkedin.com/in/abdul-majeed-nurudeen-78266a182/)
+
+## Acknowledgments
+
+- Thanks to [The Odin Project](https://www.theodinproject.com/)
+
+All praised to Allah.
