@@ -19,3 +19,7 @@ This is a solution to the [Library project in The Odin Project curriculum](https
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
+
+## Overview
+
+Here is the overview of the entire project;
