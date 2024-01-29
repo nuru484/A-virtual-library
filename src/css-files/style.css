@@ -106,6 +106,7 @@ form button {
 }
 .detail-one #delete-all:hover {
   background-color: #cf3131;
+  cursor: pointer;
 }
 
 .book-details {
