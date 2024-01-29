@@ -61,9 +61,8 @@ const checkStatus = () => {
   return true;
 };
 
-// const newBookForm = document.getElementById('new-book-form');
-const addBook = document.getElementById('add-book');
-addBook.addEventListener('submit', function (event) {
+const newBookForm = document.getElementById('new-book-form');
+newBookForm.addEventListener('submit', function (event) {
   event.preventDefault();
 
   if (checkStatus()) {
@@ -138,8 +137,3 @@ function displayBooks() {
     bookDetailElement.appendChild(bookDetail);
   });
 }
-
-// addBook.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   console.log('hello');
-// });
